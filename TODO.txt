@@ -1,0 +1,17 @@
+1. Update scripts/base/*.lua to the new system. Can avoid item-copy for now. #Hold off until reaction-trigger can keep track of items.
+2. Finish classes scripts
+ a. Make example spells.txt
+ b. Update classes.txt
+ c. Seperate out read-file, establish-class, requirements-class, and requirements-spell #DONE
+ d. Finish scripts/classes/change-class.lua #DONE
+ e. Create scripts/classes/learn-spell.lua #DONE
+ f. Tie it all together with scripts/base/classes.lua #DONE
+ g. Finish python script classes_setup.py #DONE
+3. Double check wrapper.lua
+ a. Make sure scripts/wrapper.lua is set up correctly
+ b. Make sure scripts/lua/wrapper/*.lua are all set up correctly
+4. Verify all scripts/item/*.lua are set up correctly
+5. Verify all scripts/unit/*.lua are set up correctly
+6. Rename special-*.lua scripts. Think of better organization.
+7. Check scripts/tile/change.lua, see if there are other tile based scripts that can be done.
+8. Think about making custom utility plugin for things like split (and any other scripts that are called repeatidly)
