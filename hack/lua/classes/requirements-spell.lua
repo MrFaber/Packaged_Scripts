@@ -90,6 +90,16 @@ function checkrequirements(unit,spell,classes)
       end
      end
     end
+    if y['COST'] and yes then
+     pers,status = dfhack.persistent.get(key..'_current_class')
+	 if pers.ints[3] >= tonumber(y['COST']) then
+	  pers.ints[3] = pers.ints[3] - tonumber(y['COST'])
+	  dfhack.persistent.save({key=key..'_current_class',value=pers.value,ints=pers.ints})
+	 else
+	  print('Not enough points to learn spell')
+	  yes = false
+	 end
+	end
     if y['UPGRADE'] then upgrade = y['UPGRADE'] end
     break
    end

@@ -89,6 +89,10 @@ function read_file(path)
     classes[x[1]]['SPELL'][spell]['F_CLASS'][split(totdat[j],':')[2]] = split(split(totdat[j],':')[3],']')[1]
    elseif split(totdat[j],':')[1] == '[SPELL_UPGRADE' then
     classes[x[1]]['SPELL'][spell]['UPGRADE'] = split(split(totdat[j],':')[2],']')[1]
+   elseif split(totdat[j],':')[1] == '[SPELL_COST' then
+    classes[x[1]]['SPELL'][spell]['COST'] = split(split(totdat[j],':')[2],']')[1]
+   elseif split(totdat[j],':')[1] == '[SPELL_EXP_GAIN' then
+    classes[x[1]]['SPELL'][spell]['EXP'] = split(split(totdat[j],':')[2],']')[1]
 --   else
 --    print('Unrecognized token in classes.txt '..totdat[j]..' line '..tostring(j))
    end

@@ -1,0 +1,4 @@
+modtools/reaction-trigger -reaction LEARN_SPELL_TEST_1 -command [ class-learn-spell -unit \WORKER_ID -spell SPELL_TEST_1 ]
+modtools/reaction-trigger -reaction LEARN_SPELL_TEST_2 -command [ class-learn-spell -unit \WORKER_ID -spell SPELL_TEST_2 ]
+modtools/reaction-trigger -reaction CHANGE_CLASS_SQUIRE -command [ class-change-class -unit \WORKER_ID -class SQUIRE ]
+modtools/reaction-trigger -reaction CHANGE_CLASS_WARRIOR -command [ class-change-class -unit \WORKER_ID -class WARRIOR ]
