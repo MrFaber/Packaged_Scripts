@@ -45,6 +45,7 @@ function read_file(path)
   classes[x[1]]['B_TRAIT'] = {}
   classes[x[1]]['SPELL'] = {}
   for j = x[2],x[3],1 do
+   totdat[j] = totdat[j]:gsub("%s+","")
    if split(totdat[j],':')[1] == '[NAME' then 
     classes[x[1]]['NAME'] = split(split(totdat[j],':')[2],']')[1]
    elseif split(totdat[j],':')[1] == '[LEVELS' then 
